@@ -177,7 +177,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textColor="#900"
+        android:textColor="#000000"
         android:id="@+id/count"
         android:layout_marginTop="20dp"
         android:textSize="20sp"/>
