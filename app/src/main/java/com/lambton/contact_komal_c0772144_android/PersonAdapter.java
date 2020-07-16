@@ -22,7 +22,7 @@ public class PersonAdapter extends ArrayAdapter {
     Context mContext;
     int layoutRes;
     List<Person> persons;
-    //SQLiteDatabase mDatabase;
+
 
     DatabaseHelper mDatabase;
 
