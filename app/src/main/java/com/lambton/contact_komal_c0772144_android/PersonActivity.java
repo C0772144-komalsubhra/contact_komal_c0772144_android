@@ -62,19 +62,10 @@ public class PersonActivity extends AppCompatActivity {
 
                 personAdapter = new PersonAdapter(PersonActivity.this , R.layout.list_layout , searchList , mDataBase);
                 listView.setAdapter(personAdapter);
-
-
-
             }
-
-
 
             @Override
             public void afterTextChanged(Editable s) {
-
-
-
-
 
             }
         });
@@ -173,8 +164,7 @@ public class PersonActivity extends AppCompatActivity {
 
             }while (cursor.moveToNext());
             cursor.close();
-            //show item in a listView
-            //we use a custom adapter to show employees
+
             personAdapter = new PersonAdapter(this, R.layout.list_layout, persons, mDataBase);
             listView.setAdapter(personAdapter);
 

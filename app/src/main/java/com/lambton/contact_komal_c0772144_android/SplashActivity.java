@@ -4,11 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Menu;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.logging.LogRecord;
+
 
 public class SplashActivity extends Activity {
     @Override
@@ -22,7 +20,7 @@ public class SplashActivity extends Activity {
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 finish();
             }
-        }, secondsDelayed * 1000);
+        }, secondsDelayed * 5000);
     }
 }
 

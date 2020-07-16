@@ -65,7 +65,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_EMAIL, email);
         cv.put(COLUMN_ADDRESS, address);
 
-        //insert method returns row number if the inseriton is successfully and -1 if the unsuccessfull
 
         return   sqLiteDatabase.insert(TABLE_NAME, null, cv) != -1;
 
