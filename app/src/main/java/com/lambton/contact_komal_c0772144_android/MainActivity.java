@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
 
-        if (mDataBase.addPerson(first_name, last_name, phone_number, addr))
+        if (mDataBase.addPerson(first_name, last_name, phone_number,email_address, addr))
             Toast.makeText(this, "Person added", Toast.LENGTH_SHORT).show();
         else
             Toast.makeText(this, "Person not added", Toast.LENGTH_SHORT).show();
