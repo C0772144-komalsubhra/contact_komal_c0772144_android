@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/contact"
-        android:label="@string/app_name"
+        android:label="contact_komal_c0772144_android"
         android:roundIcon="@drawable/contact"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
