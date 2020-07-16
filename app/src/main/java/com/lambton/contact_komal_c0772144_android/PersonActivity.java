@@ -22,8 +22,8 @@ import java.util.List;
 public class PersonActivity extends AppCompatActivity {
     DatabaseHelper mDataBase;
 
-    List<Person> persons;
-    List<Person> searchList = new ArrayList<>();
+    List<Contact> persons;
+    List<Contact> searchList = new ArrayList<>();
     SwipeMenuListView listView;
     EditText searchText;
     PersonAdapter personAdapter;
@@ -50,7 +50,7 @@ public class PersonActivity extends AppCompatActivity {
                 searchList.clear();
                 if(!searchText.isEmpty()){
 
-                    for (Person person:persons) {
+                    for (Contact person:persons) {
                         if(person.getFirstName().contains(searchText)){
                             searchList.add(person);
                         }
@@ -118,7 +118,7 @@ public class PersonActivity extends AppCompatActivity {
                         // update
 
                         Toast.makeText(PersonActivity.this, "update clicked", Toast.LENGTH_SHORT).show();
-                        Person person1 = persons.get(position);
+                        Contact person1 = persons.get(position);
                         personAdapter.updatePerson(person1);
                         persons.clear();
 //                        personList.addAll((Collection<? extends PersonClass>) mDatabase.getAllPersons());
@@ -131,7 +131,7 @@ public class PersonActivity extends AppCompatActivity {
                     case 1:
                         // delete
                         Toast.makeText(PersonActivity.this, "delete clicked", Toast.LENGTH_SHORT).show();
-                        Person person2 = persons.get(position);
+                        Contact person2 = persons.get(position);
                         int id2 = person2.getId();
                         if(mDataBase.deletePerson(id2))
                             persons.remove(position);
@@ -153,7 +153,7 @@ public class PersonActivity extends AppCompatActivity {
         Cursor cursor = mDataBase.getAllPersons();
         if(cursor.moveToFirst()){
             do {
-                persons.add(new Person(cursor.getInt(0),
+                persons.add(new Contact(cursor.getInt(0),
                         cursor.getString(1),
                         cursor.getString(2),
                         cursor.getString(3),

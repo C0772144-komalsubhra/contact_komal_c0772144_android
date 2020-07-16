@@ -1,6 +1,6 @@
 package com.lambton.contact_komal_c0772144_android;
 
-public class Person {
+public class Contact {
 
     int id;
     String firstName;
@@ -9,7 +9,7 @@ public class Person {
     String emailaddress;
     String address;
 
-    public Person(int id, String firstName, String lastName, String phoneNumber,String emailaddress, String address) {
+    public Contact(int id, String firstName, String lastName, String phoneNumber, String emailaddress, String address) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

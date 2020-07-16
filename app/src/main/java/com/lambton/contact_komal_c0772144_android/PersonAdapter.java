@@ -21,13 +21,13 @@ public class PersonAdapter extends ArrayAdapter {
 
     Context mContext;
     int layoutRes;
-    List<Person> persons;
+    List<Contact> persons;
 
 
     DatabaseHelper mDatabase;
 
 
-    public PersonAdapter( Context mContext, int layoutRes, List<Person> persons, DatabaseHelper mDatabase) {
+    public PersonAdapter(Context mContext, int layoutRes, List<Contact> persons, DatabaseHelper mDatabase) {
         super(mContext, layoutRes,persons);
         this.mContext = mContext;
         this.layoutRes = layoutRes;
@@ -51,7 +51,7 @@ public class PersonAdapter extends ArrayAdapter {
         TextView email = v.findViewById(R.id.email_address);
         TextView addr = v.findViewById(R.id.address);
 
-        final Person person = persons.get(position);
+        final Contact person = persons.get(position);
         firstName.setText(person.getFirstName());
         lastName.setText(String.valueOf(person.getLastName()));
         phone.setText(person.getPhoneNumber());
@@ -65,7 +65,7 @@ public class PersonAdapter extends ArrayAdapter {
 
 
 
-    public void updatePerson(final Person person) {
+    public void updatePerson(final Contact person) {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
@@ -152,7 +152,7 @@ public class PersonAdapter extends ArrayAdapter {
         if(cursor.moveToFirst()){
             persons.clear();
             do{
-                persons.add(new Person(cursor.getInt(0),
+                persons.add(new Contact(cursor.getInt(0),
                         cursor.getString(1),
                         cursor.getString(2),
                         cursor.getString(3),
@@ -169,7 +169,7 @@ public class PersonAdapter extends ArrayAdapter {
 
     }
 
-    public  void update(ArrayList<Person> results){
+    public  void update(ArrayList<Contact> results){
         persons = new ArrayList<>();
         persons.addAll(results);
         notifyDataSetChanged();
